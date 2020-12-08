@@ -11,8 +11,10 @@
         <div class="card col-md-6" style="width: 18rem;">
             <img src="@picture.ImageUrl" class="card-img-top" alt="">
             <div class="card-body">
-                <h5 class="card-title">@picture.Name</h5>
-                @picture.CategoryName
+                <h5 class="card-title m-0 p-0">@picture.Name</h5>
+                <sub>
+                    Id: @picture.CategoryId Name: @picture.CategoryName
+                </sub>
             </div>
         </div>
     }
