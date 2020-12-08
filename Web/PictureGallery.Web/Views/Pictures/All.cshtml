@@ -1,0 +1,21 @@
+﻿@model PictureGallery.Web.ViewModels.Pictures.PictureListViewModel
+@{
+    this.ViewData["Title"] = "All pictures";
+}
+
+<h1>@this.ViewData["Title"]</h1>
+<hr />
+<div class="row">
+    @foreach (var picture in this.Model.Pictures)
+    {
+        <div class="card col-md-6" style="width: 18rem;">
+            <img src="@picture.ImageUrl" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">@picture.Name</h5>
+                @picture.CategoryName
+            </div>
+        </div>
+    }
+</div>
+<hr />
+<partial name="_PagingPartial" model="@Model" />

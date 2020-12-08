@@ -1,0 +1,16 @@
+﻿@using PictureGallery.Common
+@model PictureGallery.Web.ViewModels.Home.IndexViewModel
+@{
+    this.ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to @GlobalConstants.SystemName on this @DateTime.UtcNow.ToString("dd-MM-yyyy")!</h1>
+    <div class="col-md-4 offset-md-4">
+        <p>Available for you:</p>
+        <ul class="list-group">
+            <li class="list-group-item bg-info">Pictures: @Model.PicturesCount</li>
+            <li class="list-group-item bg-info">Available Pictures: @Model.AvailablePicture</li>
+        </ul>
+    </div>
+</div>
