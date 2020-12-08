@@ -1,3 +1,2 @@
 # PictureGallery
 small project
-d
